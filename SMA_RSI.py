@@ -17,8 +17,8 @@ from pyalgotrade.technical import rsi
 
 st.title("ALGORITHMIC TRADING")
 st.header("MINOR **PROJECT**")
-
-tick = st.text_input("ENTER STOCK NAME:")
+st.write("(This is a small project which will do the Backtesting and show the result whether in 1 yr using this strategy with 1Lac capital you are Profitable or Not)")
+tick = st.text_input("Enter Stock Name:  (Add \".ns \" at the end for eg. SBIN.IN)")
 data = yf.download(tickers =  tick , period = '300d' , interval = '1d')
 data.to_csv('candle.csv')
 st.dataframe(data)
